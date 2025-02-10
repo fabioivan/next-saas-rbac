@@ -1,0 +1,22 @@
+{
+  "name": "@saas/api",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "dev": "tsx watch src/index.ts"
+  },
+  "devDependencies": {
+    "@saas/eslint-config": "workspace:*",
+    "@saas/prettier": "workspace:*",
+    "@saas/tsconfig": "workspace:*",
+    "@saas/auth": "workspace:*",
+    "@types/node": "^22.13.1",
+    "tsx": "^4.19.2"
+  },
+  "prettier": "@saas/prettier",
+  "eslintConfig": [
+    "@saas/eslint-config/node"
+  ]
+}
