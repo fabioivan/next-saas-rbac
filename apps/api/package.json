@@ -5,18 +5,26 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "dev": "tsx watch src/index.ts"
+    "dev": "tsx watch src/http/server.ts"
   },
   "devDependencies": {
+    "@saas/auth": "workspace:*",
     "@saas/eslint-config": "workspace:*",
     "@saas/prettier": "workspace:*",
     "@saas/tsconfig": "workspace:*",
-    "@saas/auth": "workspace:*",
     "@types/node": "^22.13.1",
     "tsx": "^4.19.2"
   },
   "prettier": "@saas/prettier",
-  "eslintConfig": [
-    "@saas/eslint-config/node"
-  ]
+  "eslintConfig": {
+    "extends": [
+      "@saas/eslint-config/node"
+    ]
+  },
+  "dependencies": {
+    "@fastify/cors": "^10.0.2",
+    "fastify": "^5.2.1",
+    "fastify-type-provider-zod": "^4.0.2",
+    "zod": "^3.24.1"
+  }
 }
